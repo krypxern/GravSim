@@ -1,5 +1,11 @@
 #include "calculator.h"
 
+Calculator::Calculator()
+{
+	regA = 0;
+	regB = 0;
+}
+
 //Input/Output
 void Calculator::setRegA(double a)
 {

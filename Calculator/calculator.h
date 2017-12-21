@@ -4,6 +4,7 @@
 class Calculator
 {
 public:
+	Calculator();
 	void setRegA(double a);
 	void setRegB(double b);
 	double getAnswer();
