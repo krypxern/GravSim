@@ -19,7 +19,8 @@ string Person::toString()
 {
 	stringstream convert;
 
-	convert << name << " ate " << pancakes << " pancakes.";
+	string s = pancakes == 1 ? " pancake." : " pancakes.";
+	convert << name << " ate " << pancakes << s;
 	return convert.str();
 }
 
