@@ -34,6 +34,7 @@ void UI::addPerson()
 
 std::string UI::getName()
 {
+	cout << "What's this person's name?\n";
 	string s = "";
 	cin >> s;
 	return s;
@@ -41,6 +42,7 @@ std::string UI::getName()
 
 int UI::getPancakes()
 {
+	cout << "How many pancakes did they have?\n";
 	string s = "";
 	cin >> s;
 	return stoi(s);
