@@ -29,7 +29,10 @@ void UI::run()
 
 void UI::addPerson()
 {
-	pList.addPerson(getName(), getPancakes());
+	string name = getName();
+	int pancakes = getPancakes();
+
+	pList.addPerson(name, pancakes);
 }
 
 std::string UI::getName()
