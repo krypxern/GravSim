@@ -1,6 +1,7 @@
 OBJS = person.cpp personList.cpp ui.cpp main.cpp
 CC = g++
-CFLGS = -o
+CFLGS = -std=c++11
+FLGS = -o
 
 main: $(OBJS)
-	$(CC) $(OBJS) $(CFLGS) main
+	$(CC) $(OBJS) $(CFLGS) $(FLGS) main
