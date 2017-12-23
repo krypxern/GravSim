@@ -26,6 +26,8 @@ public:
 		return lhs.codeMatch(rhs);
 	}
 private:
+	int size;
+
 	std::vector<Element> parseCode(std::string co);
 
 	std::vector<Element> elements;
