@@ -71,6 +71,11 @@ string Code::validate(string oth)
 	return answer.str();
 }
 
+string Code::validate(Code oth)
+{
+	return validate(oth.toString());
+}
+
 vector<Element> Code::parseCode(string co)
 {
 	const char* Els = co.c_str();
