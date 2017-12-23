@@ -1,4 +1,5 @@
 #include "code.h"
+#include <sstream>
 
 using namespace std;
 
@@ -41,6 +42,18 @@ Code::Code(string co)
 	{
 		Code();
 	}
+}
+
+string Code::toString()
+{
+	stringstream convert = stringstream();
+
+	for(int i = 0; i < size; i++)
+	{
+		convert << elements.at(i).toString();
+	}
+
+	return convert.str();
 }
 
 vector<Element> Code::parseCode(string co)
