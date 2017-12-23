@@ -7,6 +7,8 @@
 class Code
 {
 public:
+	static const int CODESIZE = 6;
+
 	Code();
 	Code(std::vector<Element> elements);
 	Code(std::string co);
