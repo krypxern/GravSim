@@ -2,7 +2,6 @@
 #define __ELEMENT_H_INCLUDED__
 
 #include <string>
-#include <ostream>
 
 class Element
 {
