@@ -16,7 +16,6 @@ public:
 	std::string toString();
 
 	std::string validate(std::string oth);
-	std::string validate(std::vector<Element> oth);
 	std::string validate(Code oth);
 
 	bool codeMatch(std::string oth) const;

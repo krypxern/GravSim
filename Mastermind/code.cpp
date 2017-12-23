@@ -56,6 +56,21 @@ string Code::toString()
 	return convert.str();
 }
 
+string Code::validate(string oth)
+{
+	stringstream answer = stringstream();
+
+	const char* Thi = toString().c_str();
+	const char* Oth = oth.c_str();
+
+	for(int i = 0; i < size; i++)
+	{
+		answer <<  (Thi[i] == Oth[i] ? Thi[i] : 'X');
+	}
+
+	return answer.str();
+}
+
 vector<Element> Code::parseCode(string co)
 {
 	const char* Els = co.c_str();
