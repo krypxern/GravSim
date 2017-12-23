@@ -4,8 +4,9 @@ using namespace std;
 
 Code::Code()
 {
-	this->elements = vector<Element>();
 	size = CODESIZE;
+
+	this->elements = vector<Element>();
 
 	//Fill with default elements
 	for(int i = 0; i < size; i++)
@@ -16,6 +17,8 @@ Code::Code()
 
 Code::Code(vector<Element> elements)
 {
+	size = CODESIZE;
+
 	if(CODESIZE == elements.size())
 	{
 		this->elements = elements;
@@ -28,7 +31,9 @@ Code::Code(vector<Element> elements)
 
 Code::Code(string co)
 {
-	if(CODESIZE == co.size())
+	size = CODESIZE;
+
+	if(CODESIZE == co.length())
 	{
 		this->elements = parseCode(co);
 	}
@@ -40,6 +45,13 @@ Code::Code(string co)
 
 vector<Element> Code::parseCode(string co)
 {
-	//Placeholder
-	return vector<Element>();
+	const char* Els = co.c_str();
+	vector<Element> elements = vector<Element>();
+
+	for(int i = 0; i < size; i++)
+	{
+		elements.push_back(Element(Els[i]));
+	}
+			
+	return elements;
 }
